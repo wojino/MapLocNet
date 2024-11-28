@@ -6,3 +6,9 @@ This repository contains the implementation of **MapLocNet**, a transformer-base
 *(Authors: Hang Wu et al.)*
 
 This work is focused on reproducing and understanding the methods proposed in the original paper by implementing the network architecture, training pipeline, and evaluation protocols.
+
+
+# Download the dataset
+``` bash
+python -m MapLocNet.data.nuScenes.prepare
+```

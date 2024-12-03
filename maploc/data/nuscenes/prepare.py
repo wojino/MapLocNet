@@ -66,7 +66,7 @@ def extract(data_dir: Path):
 
 
 if __name__ == "__main__":
-    local_path = Path("datasets/nuScenes")
+    local_path = Path("datasets/nuscenes")
     logger.info("Downloading nuScenes dataset...")
     download(Path(local_path))
     logger.info("Downloaded nuScenes dataset.")

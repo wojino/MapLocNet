@@ -10,5 +10,5 @@ This work is focused on reproducing and understanding the methods proposed in th
 
 # Download the dataset
 ``` bash
-python -m MapLocNet.data.nuScenes.prepare
+python -m maploc.data.nuscenes.prepare
 ```

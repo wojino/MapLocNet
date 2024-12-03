@@ -1,0 +1,5 @@
+name: nuscenes
+version: v1.0-trainval
+data_dir: ./datasets/nuscenes
+batch_size: 8
+num_workers: 4

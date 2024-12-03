@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, Dataset
@@ -58,11 +58,11 @@ class NuScenesDataModule(pl.LightningDataModule):
         self.num_workers = self.cfg.num_workers
         self.nusc = NuScenes(version=self.version, dataroot=self.data_dir, verbose=True)
 
-    def setup(self, stage: Optional[str] = None):
-        if stage == "fit" or stage is None:
+    def setup(self, stage: str):
+        if stage == "fit":
             self.train_dataset = NuScenesDataset(self.nusc, "train", self.data_dir)
             self.val_dataset = NuScenesDataset(self.nusc, "val", self.data_dir)
-        if stage == "test" or stage is None:
+        elif stage == "test":
             self.test_dataset = NuScenesDataset(self.nusc, "test", self.data_dir)
 
     def train_dataloader(self):
